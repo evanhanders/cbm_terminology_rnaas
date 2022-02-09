@@ -13,6 +13,9 @@ A simple estimate of the size of an overshoot region can come from a simple $\De
 Here $\Delta x$ is the size of the OZ, $u$ is the convective velocity, and $\Delta t \sim N^{-1}$ is the inverse of the \brunt$\,$frequency in the RZ.
 Overshoot is a process which occurs on the dynamical timescale and is ever-present, but is generally small in stellar environments.
 
+This process is generally the process people implement in stellar structure codes \citep[per e.g.,][]{herwig_2000}, but generally occurs on much smaller length scales than is used frequently.
+Convective overshoot was studied thoroughly and discussed in \citet{korre_etal_2019}
+
 
 \subsection{Entrainment}
 Return flows from overshooting convection carry material with the chemical and entropic composition of the RZ.
@@ -20,12 +23,17 @@ This material is quickly mixed by turbulence in the convection zone.
 As a result, convective motions which overshoot and entrain materials can cause convective boundaries to gradually advance.
 
 Entrainment is a process which occurs over many dynamical times, and is generally much faster than nuclear timescales.
+Entrainment has been modeled in stellar structure codes by a few authors \citep{staritsin_2013, scott_etal_2021}, but is not standard in any codes.
+Entrainment was studied and discussed in its historical context in \citet{fuentes_cumming_2020}.
 
 
 \subsection{Convective penetration}
 In some cases, convection zones can grow by entrainment beyond the place where $\gradrad = \gradad$.
 This can create an extended, well-mixed nearly-adiabatic ``penetration zone'' beyond the convective boundary.
 The process of convective penetration is therefore a process by which convection zones can potentially mix far beyond the convective boundary.
+
+Convective penetration most closely resembles the ``step overshoot'' often employed in stellar structure models, but it mixes entropy as well as composition.
+\citet{anders_etal_2021} discuss the theory of convective penetration, includings its roots in the work of \citet{roxburgh1978, roxburgh1989} and \citet{zahn1991}.
 
 
 \subsection{Some points of confusion}
