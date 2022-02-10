@@ -2,7 +2,7 @@
 
 all: rnaas_cbm_terminology.pdf
 
-rnaas_cbm_terminology.pdf: rnaas_cbm_terminology.tex intro.tex processes.tex conclusions.tex
+rnaas_cbm_terminology.pdf: rnaas_cbm_terminology.tex intro.tex processes.tex structure.tex conclusions.tex
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make rnaas_cbm_terminology.tex; texcount -v3 -merge -incbib -dir -sub=none -utf8 -sum rnaas_cbm_terminology.tex
 
 clean:
