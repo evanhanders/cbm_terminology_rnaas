@@ -1,39 +1,37 @@
 \section{CBM Processes}
 \label{sec:processes}
 
-We will now describe each CBM process in turn.
-In the following discussion, when we say ``convective boundary,'' we are referring to the location of the convective boundary determined by the sign change of either the Schwarzschild or Ledoux discriminant.
+In the following discussion of each CBM process, ``convective boundary'' refers to the location coinciding with the sign change of either the Schwarzschild or Ledoux discriminant.
 
 \subsection{Mechanical Overshoot}
 The process of mechanical overshoot (or convective overshoot) is shown in the upper left panel of Fig.~\ref{fig:schema}.
 Mechanical overshoot occurs because the convective boundary is not the location where convective velocities are zero, but rather the location where the \emph{buoyant acceleration} of the fluid is zero.
-Flows buoyantly decelerate beyond the convective boundary, so there is an extended region with nonzero convective velocities.
+Flows buoyantly decelerate beyond the convective boundary, so there is an extended overshoot zone (OZ) with nonzero convective velocities.
 
-A simple $\Delta x = u \Delta t$ argument provides an estimate for how deeply convective motions overshoot.
-Here $\Delta x$ is the overshoot depth, $u$ is the convective velocity, and $\Delta t \approx N^{-1}$ where $N$ is the \brunt$\,$frequency in the stable region.
+A simple $\Delta x = u \Delta t$ argument provides an estimate for how far convective motions overshoot.
+Here $\Delta x$ is the overshoot distance, $u$ is the convective velocity, and $\Delta t \approx N^{-1}$ where $N$ is the \brunt$\,$frequency in the stable region.
 In stellar environments, this estimate generally retrieves $\Delta x \ll H_P$, where $H_P$ is the pressure scale height.
 
-The exponential overshoot parameterization \citep[per e.g.,][]{herwig_2000} which is implemented in many 1D stellar evolution models describes this process fairly well, but 1D modelers generally use $\Delta x/H_P \sim \mathcal{O}(0.1)$, much larger than our earlier estimate.
+The exponential overshoot parameterization \citep[per e.g.,][]{herwig_2000} which is frequently implemented in 1D models describes this process fairly well, but 1D modelers generally use a large $\Delta x/H_P \sim \mathcal{O}(0.1)$.
 Hydrodynamical simulations of overshoot have been discussed and contextualized in e.g., \citet{korre_etal_2019}.
 
 
 \subsection{Entrainment}
 The process of entrainment is shown in the upper middle panel of Fig.~\ref{fig:schema}.
-Return flows from overshooting convection carry fluid with the chemical and thermodynamic signature of the RZ.
+Return flows from overshooting convection carry fluid with the chemical and thermodynamic signature of the radiative zone (RZ).
 This material then rapidly turbulently mixes in the convection zone.
-As a result, convective motions which overshoot and entrain materials can cause convective boundaries to gradually advance.
-As entrainment is linked to the overshooting process described above, the overshoot length scale $\Delta x$ is directly related to how rapidly a convective boundary can advance by entrainment.
+As a result, convective motions which overshoot and entrain materials can gradually move convective boundaries.
+Since entrainment is linked to mechanical overshooting, the overshoot distance $\Delta x$ directly relates to how much fluid a single flow can entrain.
 
 Entrainment has been modeled in 1D stellar evolution codes by \citet{staritsin_2013} and \citet{scott_etal_2021}, but their implementations differ from one another and entrainment is not standard in any code.
-Hydrodynamical simulations of entrainment have been discussed and contextualized in e.g., \citet{meakin_arnett_2007} \& \citet{fuentes_cumming_2020}.
+Hydrodynamical simulations of entrainment have been discussed and contextualized in e.g., \citet{fuentes_cumming_2020}.
 
 
 \subsection{Penetrative Convection}
 The process of penetrative convection is shown in the upper right panel of Fig.~\ref{fig:schema}.
-Through continual overshoot and entrainment, well-mixed convective regions can extend beyond the convective boundary.
-In these adiabatic extensions to the convection zone, weak buoyancy forces decelerate convective flows over appreciable length scales.
-Over time, this process creates an extended, nearly-adiabatic ``penetrative zone'' beyond the convective boundary.
-Since penetrative zones are established over many dynamical times, they can have length scales much larger than the previously mentioned overshoot length scale $\Delta x$.
+Through continual overshoot and entrainment, convection can create well-mixed regions which extend beyond the convective boundary.
+In these adiabatic extensions to the convection zone, weak buoyancy forces act to decelerate convective flows.
+Since penetrative zones (PZs) can gradually grow over many dynamical times, they can be much larger than the overshoot distance $\Delta x$.
 
-Penetrative convection most closely resembles ``step overshoot'' employed in 1D stellar evolution models, but penetrative convection mixes both entropy and composition.
-Hydrodynamical simulations of penetrative convection have been discussed and contextualized in e.g., \citet{anders_etal_2021}, following on the theory laid down in \citet{roxburgh1978, roxburgh1989} and \citet{zahn1991}.
+Penetrative convection most closely resembles ``step overshoot'' employed in 1D models, but penetrative convection mixes both entropy and composition.
+Hydrodynamical simulations of penetrative convection have been discussed and contextualized in e.g., \citet{anders_etal_2021}.
