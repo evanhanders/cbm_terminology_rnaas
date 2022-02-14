@@ -11,6 +11,7 @@ Flows buoyantly decelerate beyond the convective boundary, so there is an extend
 A simple $\Delta x = u \Delta t$ argument provides an estimate for how far convective motions overshoot.
 Here $\Delta x$ is the overshoot distance, $u$ is the convective velocity, and $\Delta t \approx N^{-1}$ where $N$ is the \brunt$\,$frequency in the stable region.
 In stellar environments, this estimate generally retrieves $\Delta x \ll H_P$, where $H_P$ is the pressure scale height.
+We note that there is disagreement regarding precisely how to calculate $\Delta x$, but this estimate provides the proper flavor.
 
 The exponential overshoot parameterization \citep[per e.g.,][]{herwig_2000} which is frequently implemented in 1D models describes this process fairly well, but 1D models generally use a much larger $\Delta x/H_P \sim \mathcal{O}(0.1)$ than hydrodynamical simulations suggest.
 Such simulations have been discussed and contextualized in e.g., \citet{korre_etal_2019}.
@@ -21,7 +22,7 @@ The process of entrainment is shown in the upper middle panel of Fig.~\ref{fig:s
 Return flows from overshooting convection carry fluid with the chemical and thermodynamic signature of the radiative zone (RZ).
 This material then rapidly turbulently mixes in the convection zone.
 As a result, convective motions which overshoot and entrain materials can gradually move convective boundaries.
-Since entrainment is linked to mechanical overshooting, the overshoot distance $\Delta x$ directly relates to the \emph{rate} of entrainment.
+Since entrainment is linked to mechanical overshooting, the overshoot distance $\Delta x$ directly relates to the \emph{rate} of entrainment \citep[which can be inferred from frequently-plotted entrainment rate laws;][]{meakin_arnett_2007}.
 
 Entrainment has been modeled in 1D stellar evolution software instruments by \citet{staritsin_2013} and \citet{scott_etal_2021}, but their implementations differ from one another and entrainment is not standard in any instrument.
 Hydrodynamical simulations of entrainment have been discussed and contextualized in e.g., \citet{fuentes_cumming_2020}.
